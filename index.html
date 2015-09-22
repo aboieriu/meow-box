@@ -1,0 +1,162 @@
+<html>
+<head>
+<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css" />
+<link rel="stylesheet" href="app.css" />
+    <title>JS-data : Pentalog</title>
+</head>
+<body>
+<div class="container">
+    <div id="resourceStats" class="panel panel-default">
+        <div class="panel-heading">Resources</div>
+        <div class="panel-body">
+            <ul id="list-resources" class="list-group">
+            </ul>
+            <span id="lastRefresh" data-date="Sun Sep 13 2015 20:28:00 GMT+0300 (EEST)" class="label label-default"></span>
+        </div>
+
+    </div>
+    <div class="jumbotron text-center">
+        <h1>Js-data <small>Pentalog</small></h1>
+    </div>
+
+    <table id="loading-server" style="display:none">
+        <tr>
+            <td colspan="4">
+                <div style="text-align:center"><span class="label label-danger">Loading data from server</span></div>
+                <div class="sk-cube-grid">
+                    <div class="sk-cube sk-cube1"></div>
+                    <div class="sk-cube sk-cube2"></div>
+                    <div class="sk-cube sk-cube3"></div>
+                    <div class="sk-cube sk-cube4"></div>
+                    <div class="sk-cube sk-cube5"></div>
+                    <div class="sk-cube sk-cube6"></div>
+                    <div class="sk-cube sk-cube7"></div>
+                    <div class="sk-cube sk-cube8"></div>
+                    <div class="sk-cube sk-cube9"></div>
+                </div>
+
+            </td>
+        </tr>
+    </table>
+
+    <table id="loading-local" style="display:none">
+        <tr>
+            <td colspan="4">
+                <div style="text-align:center"><span class="label label-warning">Loading data from local store</span></div>
+                <div class="sk-cube-grid">
+                    <div class="sk-cube sk-cube1"></div>
+                    <div class="sk-cube sk-cube2"></div>
+                    <div class="sk-cube sk-cube3"></div>
+                    <div class="sk-cube sk-cube4"></div>
+                    <div class="sk-cube sk-cube5"></div>
+                    <div class="sk-cube sk-cube6"></div>
+                    <div class="sk-cube sk-cube7"></div>
+                    <div class="sk-cube sk-cube8"></div>
+                    <div class="sk-cube sk-cube9"></div>
+                </div>
+
+            </td>
+        </tr>
+    </table>
+    <div class="row">
+        <div id="table-btn" class="pull-right">
+            <div class="col-md12">
+                <button id = "loadUsersFromStore" class="btn btn-primary">Load data from store</button>
+                <button id = "loadUsersFromStorage" class="btn btn-primary">Load data from storage</button>
+            </div>
+
+        </div>
+    </div>
+    <table id="users" class="table table-striped">
+        <thead>
+            <tr>
+                <td></td>
+                <td>
+                    Name
+                </td>
+                <td>
+                    Email
+                </td>
+                <td>
+                    Phone
+                </td>
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td colspan="4">
+                <div class="sk-cube-grid">
+                    <div class="sk-cube sk-cube1"></div>
+                    <div class="sk-cube sk-cube2"></div>
+                    <div class="sk-cube sk-cube3"></div>
+                    <div class="sk-cube sk-cube4"></div>
+                    <div class="sk-cube sk-cube5"></div>
+                    <div class="sk-cube sk-cube6"></div>
+                    <div class="sk-cube sk-cube7"></div>
+                    <div class="sk-cube sk-cube8"></div>
+                    <div class="sk-cube sk-cube9"></div>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+
+    <h2>Create new user</h2>
+    <table id="createUsers" class="table table-striped">
+        <thead>
+
+        </thead>
+        <tbody>
+            <tr>
+                <td>##</td>
+                <td>
+                    <input type="text" placeholder="Name" id="userName"/>
+                </td>
+                <td>
+                    <input type="text" placeholder="Email" id="userEmail" />
+                </td>
+                <td>
+                    <input type="text" placeholder="Phone" id="userPhone" />
+                </td>
+                <td>
+                    <button id="addUser" class="btn btn-primary">Add</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="row cats">
+        <div class="col-md-12">
+            <div class="text-center">
+                <img id="loadCatRelation" src="cat_grumpy.png" alt="" /> <br />
+                Yo Jeff! bring ma' cats!
+            </div>
+        </div>
+        <div id="cat-box" class="col-md-12">
+
+        </div>
+    </div>
+</div>
+
+
+
+<script type = "text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+<script type = "text/javascript" src="bower_components/underscore/underscore.js"></script>
+<script type = "text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script type = "text/javascript" src="bower_components/js-data/dist/js-data.js"></script>
+<script type = "text/javascript" src="bower_components/js-data-http/dist/js-data-http.js"></script>
+<script type = "text/javascript" src="bower_components/moment/moment.js"></script>
+
+
+<script type = "text/javascript" src="app.js"></script>
+<script type = "text/javascript" src="actions/users-actions.js"></script>
+
+<script type = "text/javascript">
+    app.configDataStore();
+    StuffWithUsers.listUsers(true);
+</script>
+
+</body>
+</html>

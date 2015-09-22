@@ -1,0 +1,11 @@
+{
+  "name": "Js-data",
+  "version": "0.0.1",
+  "dependencies": {
+    "bootstrap": "3.3.4",
+    "jquery": "~2.1.3",
+    "js-data": "~2.3.0",
+    "js-data-http": "~2.0.0",
+    "underscore": "^1.8.x"
+  }
+}
