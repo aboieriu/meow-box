@@ -1,8 +1,8 @@
 var app = angular.module('myApp', ['js-data']);
 
 angular.module('myApp').config(function (DSProvider, DSHttpAdapterProvider) {
-        angular.extend(DSProvider.defaults, {keepChangeHistory: true});
-        angular.extend(DSHttpAdapterProvider.defaults, {basePath:'http://localhost:3000/api', default:true});
+    angular.extend(DSProvider.defaults, {keepChangeHistory: true});
+    angular.extend(DSHttpAdapterProvider.defaults, {basePath:'http://localhost:3000/api', default:true});
 });
 
 angular.module('myApp').factory('User', function (DS) {
@@ -44,4 +44,6 @@ app.controller('userCtrl', function ($scope, User) {
     User.findAll().then(function(data){
        $scope.users = data;
     });
+
+
 });
