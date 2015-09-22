@@ -3,6 +3,14 @@ JS data sandbox
 
 This is an test project that aims to exemplify some of the features of JS-data. You can find out more about JS-Data at https://github.com/js-data/js-data
 
+#Install
+
+Getting bower dependencies
+```
+bower install
+```
+
+
 #Usage
 
 For starting up the mocked REST service
