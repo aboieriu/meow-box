@@ -18,3 +18,4 @@ For starting up the mocked REST service
 node /service/server.js
 ```
 
+After this, just open index.html in the browser and start loading cats...
